@@ -14,3 +14,7 @@ if ! get_git; then
     read -r name email
     configure_git "$name" "$email"
 
+mkdir "$project_name"
+cd "$project_name"
+
+git init 
