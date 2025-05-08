@@ -7,3 +7,10 @@ echo "On the name, please do not use spaces! Instead, use _ (underline) or - (h√
 read -r project_name
 
 echo "Ok, let's create your project repository"
+
+if ! get_git; then
+    install_git
+    echo "What are your name and your most usual email?"
+    read -r name email
+    configure_git "$name" "$email"
+
