@@ -7,3 +7,8 @@ get_git() {
         echo "Git is not installed"
 }
 
+install_git() {
+    sudo apt-get update
+    sudo apt-get install -y git
+    echo "Git was sucessfully installed"
+}
