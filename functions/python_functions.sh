@@ -22,3 +22,9 @@ create_py_structure_from_template() {
     #Exclui a pasta do repositório remoto de template
     rm -rf template
 }
+
+install_dependencies() {
+    python -m venv venv
+    python venv/bin/activate
+    pip install -r requirements.xt
+}
