@@ -18,3 +18,8 @@ mkdir "$project_name"
 cd "$project_name"
 
 git init 
+
+if ! get_python; then
+    install_python
+
+create_py_structure_from_template

@@ -22,7 +22,3 @@ configure_git() {
 
     echo "Git configured with success!"
 }
-
-initiate_git() {
-    git init
-}
