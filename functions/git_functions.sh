@@ -10,13 +10,19 @@ get_git() {
 install_git() {
     sudo apt-get update
     sudo apt-get install -y git
-    echo "Git was sucessfully installed"
+    echo "Git was successfully installed"
 }
 
 configure_git() {
-    local username = "$1"
+    local name = "$1"
     local email = "$2"
 
-    git config --global user.name "$username"
+    git config --global user.name "$name"
     git config --global user.email "$email"
+
+    echo "Git configured with success!"
+}
+
+initiate_git() {
+    git init
 }
