@@ -12,3 +12,11 @@ install_git() {
     sudo apt-get install -y git
     echo "Git was sucessfully installed"
 }
+
+configure_git() {
+    local username = "$1"
+    local email = "$2"
+
+    git config --global user.name "$username"
+    git config --global user.email "$email"
+}
