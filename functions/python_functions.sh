@@ -6,3 +6,10 @@ get_python() {
     else
         echo "Python is not installed"
 }
+
+
+install_pyton() {
+    sudo apt-get update
+    sudo apt-get install -y python
+    echo "The latest python was successfully installed"
+}
