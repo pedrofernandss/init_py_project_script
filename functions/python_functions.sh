@@ -5,16 +5,17 @@ get_python() {
         echo "Python is installed. Current version: $(python --version)"
     else
         echo "Python is not installed"
+    fi
 }
 
 
-install_pyton() {
+install_python() {
     sudo apt-get update
-    sudo apt-get install -y python
-    echo "The latest python was successfully installed"
+    sudo apt install -y python3 python3-pip python3-venv
+    echo "#### The latest python was successfully installed"
 }
 
-create_py_structure_from_template() {
+create_py_api_struct_from_template() {
     # Clona o repositório
     git clone https://github.com/pedrofernandss/template.git
     # Move os arquivos pra pasta mae pra ficar mais organizado
@@ -24,7 +25,7 @@ create_py_structure_from_template() {
 }
 
 install_dependencies() {
-    python -m venv venv
-    python venv/bin/activate
-    pip install -r requirements.xt
+    python3 -m venv venv
+    source venv/bin/activate
+    pip install -r requirements.txt
 }
